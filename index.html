@@ -1,29 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shift Reporter</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <div class="container">
-            <h1 id="logo">Shift Reporter</h1>
-            <nav><a href="#" id="instruction">Instruction</a></nav>
-        </div>
+      <div class="container">
+        <h1 id="logo">Shift Reporter</h1>
+        <nav><a href="#" id="instruction">Instruction</a></nav>
+      </div>
     </header>
     <main>
-        <div class="container">
-            <form>
-                <p>Your input goes here:</p>
-                <textarea name="shiftsInput" id="shiftsInput"></textarea>
-                <button id="generate">Generate!</button>
-            </form>
-        </div>
+      <div class="container">
+        <form>
+          <p>Your input goes here:</p>
+          <textarea name="shiftsInput" id="shiftsInput"></textarea>
+
+          <div class="selectors">
+            <div class="label-wrapper">
+              <label for="month">Wybierz miesiąc</label>
+              <select name="month" id="month">
+                <option value="01">Styczeń</option>
+                <option value="02">Luty</option>
+                <option value="03">Marzec</option>
+                <option value="04">Kwiecień</option>
+                <option value="05">Maj</option>
+                <option value="06">Czerwiec</option>
+                <option value="07">Lipiec</option>
+                <option value="08">Sierpień</option>
+                <option value="09">Wrzesień</option>
+                <option value="10">Październik</option>
+                <option value="11">Listopad</option>
+                <option value="12">Grudzień</option>
+              </select>
+            </div>
+            <div class="label-wrapper">
+              <label for="year">Wybierz rok</label>
+              <select name="year" id="year">
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+              </select>
+            </div>
+          </div>
+          <button class="generate" id="main-generate">Generate!</button>
+        </form>
+      </div>
     </main>
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.1.1/jspdf.umd.min.js"></script>
-<script src="https://unpkg.com/jspdf-autotable@3.5.10/dist/jspdf.plugin.autotable.js"></script>
-<script src="script.js"></script>
+    <aside class="modal hidden">
+      <div class="modal-box">
+        <label for="users">Wydrukuj dla:</label>
+        <select name="users" id="users">
+          <option value="all">Wszystkich</option>
+        </select>
+        <button class="generate" id="modal-generate">Generate!</button>
+      </div>
+    </aside>
+  </body>
+  <script src="jspdf.js"></script>
+  <script src="jspdf.plugin.autotable.js"></script>
+  <script src="font.js"></script>
+  <script src="scriptObj.js"></script>
 </html>
