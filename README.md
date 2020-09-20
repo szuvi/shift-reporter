@@ -1,2 +1,3 @@
 Work in progess...
-This is supposed to be an html/css/js app to convert input from excel file to a shifts report to help me save tidious paperwork.
+This is working version of simple app to convert Google Sheet (predefined input) rows and columns into a shifts report, which until I had to fill out with pen. Saves me a ton of tidious paperwork. 
+Still needs better input verification.
