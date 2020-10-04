@@ -1,2 +1,2 @@
-Work in progess...
-This is supposed to be an html/css/js app to convert input from excel file to a shifts report to help me save tidious paperwork.
+This is simple HTML/CSS/JS app to convert predefined input from Google Sheets file and convert it to printable PDF file, to save time on tidious paperwork. \
+The app still needs more robust input verification and some minor fixes.
